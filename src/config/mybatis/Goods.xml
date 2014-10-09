@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC 
+    "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.weiquan.dao.GoodsDao">
+	<resultMap id="result-Goods-base" type="com.weiquan.domain.Goods">
+		<result property="goodsId" column="GOODSID" />
+		<result property="goodsName" column="GOODSNAME" />
+		<result property="industryId" column="INDUSTRYID" />
+		<result property="goodResume" column="GOODRESUME" />
+		<result property="infomation" column="INFOMATION" />
+		<result property="bussInfo" column="BUSSINFO" />
+		<result property="contactQQ" column="CONTACTQQ" />
+		<result property="contactWX" column="CONTACTWX" />
+		<result property="contactBU" column="CONTACTBU"/>
+		<result property="contactPhone" column="CONTACTPHONE" />
+		<result property="contactMobile" column="CONTACTMOBILE" />
+		<result property="contactAddress" column="CONTACTADDRESS" />
+		<result property="contactUser" column="CONTACTUSER" />
+	</resultMap>
+	<sql id="GoodsAllColsWithOutKey">
+		goodsName, industryId, goodResume, infomation,bussInfo,contactQQ,contactBU,contactWX,contactPhone,contactMobile,contactAddress,contactUser
+	</sql>
+	<sql id="GoodsAllCols">
+		goodsId, <include refid="GoodsAllColsWithOutKey"/>
+	</sql>
+
+	<insert id="insert" parameterType="Goods" useGeneratedKeys="true" keyProperty="goodsId">
+		insert into weiquan_Goods(<include refid="GoodsAllColsWithOutKey"/>) 
+		values(#{goodsName}, #{industryId}, #{goodResume}, #{bussInfo},#{infomation}, #{contactQQ}, 
+		#{contactWX},#{contactBU}
+		#{contactPhone}, #{contactMobile}, #{contactAddress}, #{contactUser})
+	</insert>
+
+	<update id="update" parameterType="Goods">
+		update weiquan_Goods set goodsName = #{goodsName}, industryId = #{industryId}, goodResume = #{goodResume}, 
+			bussInfo=#{bussInfo},infomation = #{infomation} 
+			contactQQ= #{contactQQ}, contactWX=#{contactWX},contactBU=#{contactBU}
+			contactPhone=#{contactPhone}, contactMobile=#{contactMobile},
+			contactAddress= #{contactAddress}, contactUser=#{contactUser}
+		where goodsId = #{goodsId}
+	</update>
+	<select id="get" resultMap="result-Goods-base"  parameterType="long" >
+		select <include refid="GoodsAllCols"/> from weiquan_Goods t  where goodsId = #{goodsId}
+	</select>
+</mapper>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC 
+    "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.weiquan.dao.ImageDao">
+	<resultMap id="result-Image-base" type="com.weiquan.domain.Image">
+		<result property="imageId" column="IMAGEID" />
+		<result property="directory" column="DIRECTORY" />
+		<result property="fileName" column="FILENAME" />
+		<result property="imageType" column="IMAGETYPE" />
+		<result property="imageSource" column="IMAGESOURCE" />
+		<result property="relationNo" column="RELATIONNO" />
+	</resultMap>
+	
+	<sql id="ImageAllColsWithOutKey">
+		 directory, fileName, industryId, imageSource,relationNo,imageType
+	</sql>
+	<sql id="ImageAllCols">
+		imageId, <include refid="ImageAllColsWithOutKey"/>
+	</sql>
+
+	<insert id="insert" parameterType="Image" useGeneratedKeys="true" keyProperty="imageId">
+		insert into ${tableName} (<include refid="ImageAllColsWithOutKey"/>) 
+		values( #{directory}, #{fileName}, #{industryId}, #{imageSource}, #{relationNo},#{imageType})
+	</insert>
+
+	<update id="update" parameterType="Image">
+		update ${tableName} 
+		  set  directory = #{directory}, 
+		      fileName = #{fileName}, industryId = #{industryId}, 
+		      imageSource = #{imageSource},imageType=#{imageType}
+	    where imageId = #{imageId}
+	</update>
+	<select id="get" resultMap="result-Image-base"  parameterType="long" >
+		select <include refid="ImageAllCols"/> from ${tableName} t  where imageId = #{imageId} 
+	</select>
+	
+	<select id="getImageByRelationNo" resultMap="result-Image-base"  parameterType="Image" >
+		select <include refid="ImageAllCols"/> from  ${tableName} t  where relationNo = #{relationNo} and  imageType = #{imageType}
+	</select>
+</mapper>

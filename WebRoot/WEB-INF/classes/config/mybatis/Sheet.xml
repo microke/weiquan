@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC 
+    "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.weiquan.dao.SheetDao" >
+	<resultMap id="result-Sheet-base" type="com.weiquan.domain.Sheet">
+		<id property="sheetId" column="SHEETID" />
+		<result property="sheetType" column="SHEETTYPE" />
+		<result property="tagId" column="TAGID" />
+		<result property="sheetName" column="SHEETNAME" />
+		<result property="sheetIntroduce" column="SHEETINTRODUCE" />
+		<result property="sheetIndex" column="SHEETINDEX" />
+		<result property="recommendUrl" column="RECOMMENDURL" />
+		<result property="recommendName" column="RECOMMENDNAME" />
+		<result property="moreUrl" column="MOREURL" />
+		<result property="sourceName" column="SOURCENAME" />
+		<result property="sourceId" column="SOURCEID" />
+		<association property="tableTemplet" column="templetId" javaType="TableTemplet" select="com.weiquan.dao.TableTempletDao.get" />
+	</resultMap>
+	<sql id="SheetAllColsWithOutKey">
+		sheetType, tagId, sheetName, sheetIntroduce, sheetIndex, recommendUrl, recommendName, moreUrl,templetId,sourceName,sourceId
+	</sql>
+	<sql id="SheetAllCols">
+		sheetId, <include refid="SheetAllColsWithOutKey"/>
+	</sql>
+
+	<insert id="insert" parameterType="Sheet" useGeneratedKeys="true" keyProperty="sheetId">
+		insert into weiquan_Sheet(<include refid="SheetAllColsWithOutKey"/>) 
+		values (#{sheetType}, #{tagId}, #{sheetName}, 
+				#{sheetIntroduce}, #{sheetIndex}, #{recommendUrl}, 
+				#{recommendName}, #{moreUrl},#{templetId},#{sourceName},#{sourceId})
+	</insert>
+
+	<update id="update" parameterType="Sheet">
+		update weiquan_Sheet set sheetType = #{sheetType}, tagId = #{tagId}, 
+		sheetName = #{sheetName}, sheetIntroduce = #{sheetIntroduce}, sheetIndex = #{sheetIndex},
+		 recommendUrl = #{recommendUrl}, recommendName = #{recommendName}, 
+		 moreUrl = #{moreUrl} ,
+		 templetId=#{templetId},
+		 sourceName = #{sourceName},
+		 sourceId = #{sourceId}
+		 where sheetId = #{sheetId}
+	</update>
+	<select id="get" resultMap="result-Sheet-base"  parameterType="long" >
+		select <include refid="SheetAllCols"/> from weiquan_Sheet t  where sheetId = #{sheetId}
+	</select>
+	
+	
+	<select id="querySheetsByTagId" parameterType="long" resultMap="result-Sheet-base">
+		select <include refid="SheetAllCols"/> from weiquan_Sheet t  where tagId = #{tagId}
+	</select>
+</mapper>

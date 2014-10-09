@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC 
+    "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.weiquan.dao.BussinessDao">
+	<resultMap id="result-Bussiness-base" type="com.weiquan.domain.Bussiness">
+		<result property="bussinessId" column="BUSSINESSID" />
+		<result property="name" column="NAME" />
+		<result property="createTime" column="CREATETIME" />
+		<result property="memo" column="MEMO" />
+		<result property="industryId" column="INDUSTRYID" />
+	</resultMap>
+	<sql id="BussinessAllColsWithOutKey">
+		name, createTime, memo,industryId
+	</sql>
+	<sql id="BussinessAllCols">
+		bussinessId, <include refid="BussinessAllColsWithOutKey"/>
+	</sql>
+
+	<insert id="insert" parameterType="Bussiness" useGeneratedKeys="true" keyProperty="bussinessId">
+		insert into weiquan_Bussiness(<include refid="BussinessAllColsWithOutKey"/>)
+		 values(#{name}, #{createTime}, #{memo}, #{industryId})
+	</insert>
+
+	<update id="update" parameterType="Bussiness">
+		update weiquan_Bussiness set name = #{name}, createTime = #{createTime}, 
+		memo = #{memo}, 
+		industryId = #{industryId} where bussinessId = #{bussinessId}
+	</update>
+	<select id="get" resultMap="result-Bussiness-base"  parameterType="long" >
+		select <include refid="BussinessAllCols"/> from weiquan_Bussiness t  where bussinessId = #{bussinessId}
+	</select>
+</mapper>

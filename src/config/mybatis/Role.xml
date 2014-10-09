@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC 
+    "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.weiquan.dao.RoleDao">
+	<resultMap id="result-Role-base" type="com.weiquan.domain.Role">
+		<result property="roleId" column="ROLEID" />
+		<result property="roleName" column="ROLENAME" />
+		<result property="rolePower" column="ROLEPOWER" />
+	</resultMap>
+	<sql id="RoleAllColsWithOutKey">
+		roleName, rolePower
+	</sql>
+	<sql id="RoleAllCols">
+		roleId, <include refid="RoleAllColsWithOutKey"/>
+	</sql>
+
+	<insert id="insert" parameterType="Role" useGeneratedKeys="true" keyProperty="roleId">
+		insert into weiquan_Role(<include refid="RoleAllColsWithOutKey"/>) values(#{roleName}, #{rolePower})
+	</insert>
+
+	<update id="update" parameterType="Role">
+		update weiquan_Role set roleName = #{roleName}, rolePower = #{rolePower} where roleId = #{roleId}
+	</update>
+	<select id="get" resultMap="result-Role-base"  parameterType="long" >
+		select <include refid="RoleAllCols"/> from weiquan_Role t  where roleId = #{roleId}
+	</select>
+</mapper>

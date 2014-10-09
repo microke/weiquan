@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC 
+    "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.weiquan.dao.SysAttributeDao">
+	<resultMap id="result-SysAttribute-base" type="com.weiquan.domain.SysAttribute">
+		<result property="attrId" column="ATTRID" />
+		<result property="groupId" column="GROUPID" />
+		<result property="attrName" column="ATTRNAME" />
+		<result property="attrValue" column="ATTRVALUE" />
+		<result property="language" column="LANGUAGE" />
+		<result property="index" column="INDEX" />
+		<result property="attrValueType" column="ATTRVALUETYPE" />
+		<result property="level" column="LEVEL" />
+	</resultMap>
+	<sql id="SysAttributeAllColsWithOutKey">
+		 groupId, attrName, attrValue, language, indexNo, attrValueType, level
+	</sql>
+	<sql id="SysAttributeAllCols">
+		attrId,<include refid="SysAttributeAllColsWithOutKey"/>
+	</sql>
+
+	<insert id="insert" parameterType="SysAttribute" useGeneratedKeys="true" keyProperty="attrId">
+		insert into weiquan_SysAttribute(<include refid="SysAttributeAllColsWithOutKey"/>) values(#{groupId}, #{attrName}, #{attrValue}, #{language}, #{indexNo}, #{attrValueType}, #{level})
+	</insert>
+
+	<update id="update" parameterType="SysAttribute">
+		update weiquan_SysAttribute set groupId = #{groupId}, attrName = #{attrName}, attrValue = #{attrValue}, language = #{language}, indexNo = #{indexNo}, attrValueType = #{attrValueType}, level = #{level} where attrId = #{attrId}
+	</update>
+	<select id="get" resultMap="result-SysAttribute-base"  parameterType="long" >
+		select <include refid="SysAttributeAllCols"/> from weiquan_SysAttribute t  where attrId = #{attrId}
+	</select>
+	
+	<select id="querySysAttributeListByGroupId" resultMap="result-SysAttribute-base"  parameterType="long" >
+		select <include refid="SysAttributeAllCols"/> from weiquan_SysAttribute t  where groupId = #{groupId} order by indexNo
+	</select>
+	
+</mapper>

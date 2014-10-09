@@ -1,0 +1,24 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd"
+	default-autowire="byName">
+	<bean id="imageService" class="com.weiquan.service.image.impl.ImageServiceImpl" />
+	<bean id="userService" class="com.weiquan.service.user.impl.UserServiceImpl" />
+	<bean id="roleService" class="com.weiquan.service.role.impl.RoleServiceImpl" />
+	<bean id="elementService" class="com.weiquan.service.element.impl.ElementServiceImpl" />
+	<bean id="industryService" class="com.weiquan.service.industry.impl.IndustryServiceImpl" />
+	<bean id="newinfoService" class="com.weiquan.service.newinfo.impl.NewInfoServiceImpl" />
+	<bean id="sheetService" class="com.weiquan.service.sheet.impl.SheetServiceImpl" />
+	<bean id="vipLevelService" class="com.weiquan.service.viplevel.impl.VipLevelServiceImpl" />
+	<bean id="sysAttributeService" class="com.weiquan.service.sysattribute.impl.SysAttributeServiceImpl" />
+	<bean id="attrMappingService" class="com.weiquan.service.attrmapping.impl.AttrMappingServiceImpl" />
+	<bean id="tagService" class="com.weiquan.service.tag.impl.TagServiceImpl" />
+	<bean id="tableTempletService" class="com.weiquan.service.tabletemplet.impl.TableTempletServiceImpl" />
+	<bean id="advertisementService" class="com.weiquan.service.advertisement.impl.AdvertisementServiceImpl" />
+	<bean id="groupService" class="com.weiquan.service.group.impl.GroupServiceImpl" />
+	<bean id="goodsService" class="com.weiquan.service.goods.impl.GoodsServiceImpl" />
+	<bean id="bussinessService" class="com.weiquan.service.bussiness.impl.BussinessServiceImpl" />
+	
+</beans>

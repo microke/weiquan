@@ -1,0 +1,431 @@
+body {
+	maring:0;
+
+}
+
+body,div,td,span,p {
+	FONT-SIZE: 12px; COLOR: #000000; LINE-HEIGHT: 18px; FONT-FAMILY: "Tahoma"; TEXT-DECORATION: none
+}
+.redTr TD{
+	color:red
+}
+
+.rowGridRedColor td{
+	background-color: #7B7BFF !important;
+	color: #9FACF7;
+}
+
+.rowGridRedColorQS td{
+	background-color: yellow !important;
+	color: #FFFFBC;
+}
+
+.rowTdColorGray td{
+	background-color: white !important;
+	color: #C0C0C0;
+}
+
+.rowTdColorCiti td{
+	background-color: 1ECEE1 !important;
+	color: #18B8C5;
+}
+
+.rowGridRedColor1 td{
+	background-color: blue !important;
+	color: #FF7DFF;
+}
+
+.rowGridRedColor2 td{
+	background-color: YELLOW !important;
+	color: #FF7DFF;
+}
+
+.rowGridRedColor3 td{
+	background-color: PINK !important;
+	color: #848C73;
+}
+.rowGridRedColor31 td{/** 00FF00小额绿色 88FB88**/
+	background-color: #B5FBB5 !important;
+	color: #C0C0C0;
+}
+.rowGridRedColor33 td{/** 差错红色*/
+	background-color: #FF00FF !important;
+	color: #C0C0C0;
+}
+.rowGridRedColor34 td{/** 0080FF已处理蓝色 A5A5FC**/
+	background-color: #A5A5FC !important;
+	color: #C0C0C0;
+}
+
+.rowGridYellowColor td{/** 0080FF已处理蓝色 A5A5FC**/
+	background-color: #FFFFAF !important;/**FFFF99 黄色代码**/
+	color: #C0C0C0;
+}
+
+.rowGridPurpleColor td{/** 0080FF已处理紫色 A5A5FC**/
+	background-color: #FF99CC !important;/**FFFF99 黄色代码**/
+	color: #C0C0C0;
+}
+
+
+.linkStyle{
+	cursor: hand;
+	color:#3387CC; 
+}
+
+
+.LISTTR{
+	background-color:expression((this.sectionRowIndex%2==0)?"#FFFFFF":"#F2F2F2")
+}
+
+
+a.test {
+	font-weight: bold;
+}
+
+input {
+	font: 12px "宋体", Tahoma;
+	padding: 1px 2px 0 2px;
+}
+.input_Normal {
+	FONT-WEIGHT: normal; FONT-SIZE: 10pt; FONT-FAMILY: "Tahoma"; BACKGROUND-COLOR: white;border:1px solid #c4c4c4;
+}
+.input_NoBoder {
+	FONT-WEIGHT: normal; FONT-SIZE: 10pt; FONT-FAMILY: "Tahoma"; BACKGROUND-COLOR: #f2f2f2;border:1px solid #c4c4c4;readonly:expression(this.readOnly=true);
+}
+input.button_half {
+	height:22px;
+	width:46px;
+	cursor: hand;
+	BORDER:#4a95c9 1px solid;
+	BACKGROUND: url(../images/utbkgnd.gif) #cfe8f5 repeat-x left center
+}
+input.button_progid {
+    BORDER: #234F98 1px solid; 
+	PADDING: 2px 2px 2px 2px; 
+	FONT-SIZE: 12px;
+    FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#FFFFFF, EndColorStr=#75B7FF); 
+    CURSOR: hand; 
+	COLOR: #000000
+}
+input.button_dis {
+	padding: 4px 10px 1px 10px;
+	border: 0;
+	margin-right: 10px;
+	cursor: hand;
+	color: #fff;
+	background: #a74d4a url(../images/button_bg.gif) left top repeat-x;
+}
+
+button_dis {
+	border: 0;
+	margin-right: 10px;
+	cursor: hand;
+	color: #fff;
+    background:transparent;
+    font:normal 11px tahoma,verdana,helvetica;
+    padding-left:3px;
+    padding-right:3px;
+    cursor:pointer;
+    margin:0;
+    overflow:visible;
+    width:auto;
+    -moz-outline:0 none;
+    outline:0 none;
+}
+
+legend.title {
+	FONT-SIZE: 12px;
+	font-weight:bold
+}
+.reg_info {
+	background: #f0f7ff 7px 50% no-repeat;
+	border: 1px solid #69c;
+	padding: 30px 5px 10px 5px;
+}
+A {
+	COLOR: #000000;
+	LINE-HEIGHT: 18px;
+	FONT-FAMILY: "Tahoma";
+	TEXT-DECORATION: none
+}
+
+A:link {
+	COLOR: #4a95c9;
+	LINE-HEIGHT: 18px;
+	FONT-FAMILY: "Tahoma";
+	TEXT-DECORATION: none
+}
+
+A:visited {
+	COLOR: #031B9E;
+	LINE-HEIGHT: 18px;
+	FONT-FAMILY: "Tahoma";
+	TEXT-DECORATION: none
+}
+
+A:active {
+	COLOR: #FF8080;
+	LINE-HEIGHT: 18px;
+	FONT-FAMILY: "Tahoma";
+	TEXT-DECORATION: none
+}
+
+A:hover {
+	COLOR: #FF8080;
+	LINE-HEIGHT: 18px;
+	FONT-FAMILY: "Tahoma";
+	TEXT-DECORATION: none
+}
+.tabInfo{
+    color:#000000
+}
+.tabInfo TD{
+	LINE-HEIGHT: 24px;
+}
+
+.tabPosInfo TD{
+	LINE-HEIGHT: 14px;
+}
+.tabPosInfoXh TD{
+	LINE-HEIGHT: 21px;
+}
+.tabPosInfo input{
+	HEIGHT: 18px;
+    line-height:14px;
+    vertical-align:middle;
+    padding: 1px 3px;
+    background:#fff url(../images/default/form/text-bg.gif) repeat-x 0 0;
+    border: 1px solid #B5B8C8;
+    width: 125px;
+}
+.RedFont{
+    color:red
+}
+.RedFont A{
+	FONT-FAMILY: "Tahoma";
+	color:red;
+	FONT-SIZE: 12px;
+}
+.RedFont A:link {
+	FONT-FAMILY: "Tahoma";
+	color:red;
+	TEXT-DECORATION: none
+}
+.RedFont A:visited {
+	FONT-FAMILY: "Tahoma";
+	color:red;
+	TEXT-DECORATION: none
+}
+.RedFont A:active {
+	font-weight: bold;
+	color:red;
+	TEXT-DECORATION: none
+}
+.RedFont A:hover {
+	COLOR: #FF8080;
+	TEXT-DECORATION: none
+}
+.GreenFont{
+    color:green
+}
+.GreenFont A{
+	FONT-FAMILY: "Tahoma";
+	color:green
+}
+.GreenFont A:link {
+	FONT-FAMILY: "Tahoma";
+	color:green;
+	TEXT-DECORATION: none
+}
+
+.GreenFont A:visited {
+	FONT-FAMILY: "Tahoma";
+	color:green;
+	TEXT-DECORATION: none
+}
+
+.GreenFont A:active {
+	font-weight: bold;
+	color:green;
+	TEXT-DECORATION: none
+}
+
+.GreenFont A:hover {
+	color:#00FF00;
+	TEXT-DECORATION: none
+}
+.GrayFont TD{
+    color:gray
+}
+.GrayFont A{
+	FONT-FAMILY: "Tahoma";
+    color:gray
+}
+.GrayFont A:link {
+	FONT-FAMILY: "Tahoma";
+	color:gray;
+	TEXT-DECORATION: none
+}
+
+.GrayFont A:visited {
+	FONT-FAMILY: "Tahoma";
+	color:gray;
+	TEXT-DECORATION: none
+}
+
+.GrayFont A:active {
+	font-weight: bold;
+	color:gray;
+	TEXT-DECORATION: none
+}
+.GrayFont A:hover {
+	color:gray;
+	TEXT-DECORATION: none
+}
+.GrayBack{
+    background-color:#f2f2f2
+}
+.WhiteBack{
+    background-color:#ffffff
+}
+.titleBack{
+	background-color:#4E5A85
+}
+.titleBack TD{
+	color:#FFFFFF
+}
+.LightSkyBack{
+	background-color:#f0f7ff
+}
+TABLE.tabList {	
+	background-color: #f2f2f2;
+}
+TABLE.tabList TD{	
+   text-align:center;
+   padding: 4px
+}
+TABLE.comfirmTabList {	
+	background-color: #f2f2f2;
+}
+TABLE.comfirmTabList TD{	
+   text-align:center;
+   padding: 2px
+}
+TABLE.tabPosList {	
+	background-color: #f2f2f2;
+}
+TABLE.tabPosList TD{	
+   text-align:right;
+   padding: 4px
+}
+
+TABLE.tabPosListSrc {	
+	background-color: #f2f2f2;
+}
+TABLE.tabPosListSrc TD{	
+    LINE-HEIGHT: 47px;
+    text-align:right;
+    padding: 4px;
+   	font-size:16px;
+	font-weight:700;
+}
+TABLE.tabListNoTitle{
+   background-color: #EBEBEB;
+   color: #4E5A85
+}
+TABLE.tabListNoTitle TR {
+   text-align: center;
+   background-color:expression((this.sectionRowIndex%2==0)?"#f0f7ff":"#FFFFFF")
+}
+TABLE.tabListNoTitle TD {
+   padding: 4px;
+}
+.ReportHead{
+	font-size:18px;
+	font-weight:700;
+	text-align:center;
+	color:#15428b;
+}
+
+.posting-msg{
+	display:none;
+	font:normal 8pt tahoma, arial;
+	color:black;
+}
+.x-dlg-ft{
+	position:relative;
+}
+
+#dlg-msg {
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:40%;
+	padding-top:3px;
+}
+.waitting{
+	text-align: left;
+	padding-left: 20px;
+	background-repeat: no-repeat;
+	background-position: top left;
+	font-size: 8pt;
+	height: 18px;
+	padding-top: 3px;
+	border: 0px solid;
+	color: #428938;
+}
+.waitting {
+	background-image: url('../images/loading.gif');
+}
+.active-msg{
+	display: block;
+}
+TABLE.ReportConTbl{
+	border: 1px solid #f2f2f2;
+	border-collapse:collapse
+}
+#nothing {width:17%;position:absolute;left:540px;top:33px;z-index:500;right-padding:1px}
+#forwardSwapNothing {width:17%;position:absolute;left:800px;top:33px;z-index:500;right-padding:1px}
+#errorbookstyle {width:50%;position:absolute;left:450px;top:345px;z-index:500;right-padding:1px}
+#rateOut {position:absolute;right:4px;top:3px;z-index:2000;right-padding:1px}	
+#priceTab {width:51%;padding:0px;float:left} 
+
+#priceTab .x-tabs-item-body {display:none;height:254px;overflow:auto;}
+
+#centerTab {width:100%;padding:0px}
+#centerTab .x-tabs-item-body {display:none;padding:0px;height:230px;overflow:auto;}
+
+#rightTab {width:100%;padding:0px}
+
+#rightTab .x-tabs-item-body {display:none;height:270px}
+
+#eventTab {width:100%;padding:0px}
+#eventTab .x-tabs-item-body {display:none;height:283px}
+
+#bottomTab {width:100%;padding:0px}
+#bottomTab .x-tabs-item-body {display:none;height:230px;overflow:auto;}
+
+#title{
+	width:45%;
+	float:left;
+}
+#toolbar{
+	width:100%;padding-bottom:1px;padding-top:1px;
+}
+.x-grid-col-thin td{
+	border-right: 1px solid #ebebeb;
+	border-bottom: 1px solid #ebebeb;
+}
+.x-grid-head-coltd td{
+	text-align:center;
+	border-right: 1px solid #9DC5FF
+}
+.x-grid-head-row .x-grid-hd-text{
+	border-bottom:1px solid #7CA3E9;
+	right:-1px;
+	width:100%;
+	overflow: hidden;
+	position: relative;
+	background: url(../images/default/grid/grid-blue-split.gif) no-repeat right 5px
+}

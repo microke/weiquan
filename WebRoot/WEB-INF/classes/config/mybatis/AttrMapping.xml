@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC 
+    "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.weiquan.dao.AttrMappingDao">
+	<resultMap id="result-AttrMapping-base" type="com.weiquan.domain.AttrMapping">
+		<result property="serilno" column="SERILNO" />
+		<result property="javaName" column="JAVANAME" />
+		<result property="attrName" column="ATTRNAME" />
+		<result property="groupId" column="GROUPID" />
+		<result property="level" column="LEVEL" />
+		<result property="model" column="MODEL" />
+	</resultMap>
+	<sql id="AttrMappingAllColsWithOutKey">
+		javaName, attrName, groupId, level, model
+	</sql>
+	<sql id="AttrMappingAllCols">
+		serilno, <include refid="AttrMappingAllColsWithOutKey"/>
+	</sql>
+
+	<insert id="insert" parameterType="AttrMapping" useGeneratedKeys="true" keyProperty="serilno">
+		insert into weiquan_AttrMapping(<include refid="AttrMappingAllColsWithOutKey"/>) values(#{javaName}, #{attrName}, #{groupId}, #{level}, #{model})
+	</insert>
+
+	<update id="update" parameterType="AttrMapping">
+		update weiquan_AttrMapping set javaName = #{javaName}, attrName = #{attrName}, groupId = #{groupId}, level = #{level}, model = #{model} where serilno = #{serilno}
+	</update>
+	<select id="get" resultMap="result-AttrMapping-base"  parameterType="long" >
+		select <include refid="AttrMappingAllCols"/> from weiquan_AttrMapping t  where serilno = #{serilno}
+	</select>
+	
+	<select id="getAttrMappingByIndex" resultMap="result-AttrMapping-base"  parameterType="AttrMapping" >
+		select <include refid="AttrMappingAllCols"/> 
+		from weiquan_AttrMapping t  
+		where model = #{model} and javaName = #{javaName} and attrName = #{attrName}
+	</select>
+</mapper>

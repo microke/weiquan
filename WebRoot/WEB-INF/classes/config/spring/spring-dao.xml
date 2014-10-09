@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+    http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans-2.0.xsd"
+	default-autowire="byName">
+<!-- 
+	<bean id="userDao" class="org.mybatis.spring.mapper.MapperFactoryBean" >
+		<property name="mapperInterface" value="com.weiquan.dao.UserDao"></property>
+        <property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
+	</bean>
+	<bean id="elementDao" class="org.mybatis.spring.mapper.MapperFactoryBean" >
+		<property name="mapperInterface" value="com.weiquan.dao.ElementDao"></property>
+		<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
+	</bean>
+	<bean id="groupTypeDao" class="org.mybatis.spring.mapper.MapperFactoryBean" >
+		<property name="mapperInterface" value="com.weiquan.dao.GroupTypeDao"></property>
+		<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
+	</bean>
+	<bean id="newDao" class="org.mybatis.spring.mapper.MapperFactoryBean" >
+		<property name="mapperInterface" value="com.weiquan.dao.NewDao"></property>
+		<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
+	</bean>
+	<bean id="roleDao" class="org.mybatis.spring.mapper.MapperFactoryBean" >
+		<property name="mapperInterface" value="com.weiquan.dao.RoleDao"></property>
+		<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
+	</bean>
+	<bean id="sheetDao" class="org.mybatis.spring.mapper.MapperFactoryBean" >
+		<property name="mapperInterface" value="com.weiquan.dao.SheetDao"></property>
+		<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
+	</bean>
+	<bean id="vipLevelDao" class="org.mybatis.spring.mapper.MapperFactoryBean" >
+		<property name="mapperInterface" value="com.weiquan.dao.VipLevelDao"></property>
+		<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
+	</bean> -->
+</beans>

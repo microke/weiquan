@@ -1,0 +1,330 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>添加好友群 - 交友微信群 - 微信群大全|精品微信群推荐平台</title>
+<meta name="keywords" content="微信群,微信群二维码">
+<meta name="description" content="通过扫二维码可以进入微信群，来群里可以尽情的添加好友，让自己拥有更多的粉丝">
+<link rel="stylesheet" href="http://www.weixinqun.cc/statics/css/weixinqun.css" />
+<script type="text/javascript" src="http://www.weixinqun.cc/statics/js/jquery.min.js"></script>
+<script type="text/javascript" src="http://www.weixinqun.cc/statics/js/jquery.cxscroll.js"></script>
+</head>
+<body>
+<div class="head clearfix">
+	<div class="content clearfix">
+		<div class="logo"><a href="http://www.weixinqun.cc/"><img src="http://www.weixinqun.cc/statics/images//weixinqun/logo.jpg" alt="微信群"/></a></div>
+		<div class="nav">
+			<ul class="navUl">
+				<li class="navLi"><a href="http://www.weixinqun.cc/">首页</a></li>
+												<li  class="navLi" ><a href="http://www.weixinqun.cc/index.php?m=content&c=index&a=lists&catid=6">微信群</a></li>
+								<li  class="navLi" ><a href="http://www.weixinqun.cc/list-34-1.html">推荐</a></li>
+								<li  class="navLi" ><a href="http://www.weixinqun.cc/list-9-1.html">群主</a></li>
+								<li  class="navLi" ><a href="http://www.weixinqun.cc/list-35-1.html">货源</a></li>
+												<!--
+				<li class="navLi"><a href="#">货源</a>
+					<div class="twoNav clearfix">
+						<ul class="twoUl clearfix">
+							<li class="twoLi"><a href="http://www.weixinqun.cc/index.php?m=content&c=index&a=lists&catid=12">互粉</a></li>
+							<li class="twoLi"><a href="http://www.weixinqun.cc/index.php?m=content&c=index&a=lists&catid=13">互赞</a></li>
+							<li class="twoLi"><a href="http://www.weixinqun.cc/index.php?m=content&c=index&a=lists&catid=14">星座</a></li>
+							<li class="twoLi"><a href="http://www.weixinqun.cc/index.php?m=content&c=index&a=lists&catid=15">影视</a></li>
+							<li class="twoLi"><a href="http://www.weixinqun.cc/index.php?m=content&c=index&a=lists&catid=29">运动</a></li>
+							<li class="twoLi"><a href="http://www.weixinqun.cc/index.php?m=content&c=index&a=lists&catid=17">美食</a></li>
+							<li class="twoLi"><a href="http://www.weixinqun.cc/index.php?m=content&c=index&a=lists&catid=22">购物</a></li>
+							<li class="twoLi"><a href="http://www.weixinqun.cc/index.php?m=content&c=index&a=lists&catid=26">粉丝</a></li>
+							<li class="twoLi"><a href="http://www.weixinqun.cc/index.php?m=content&c=index&a=lists&catid=24">行业</a></li>
+							<li class="twoLi"><a href="http://www.weixinqun.cc/index.php?m=content&c=index&a=lists&catid=30">其他</a></li>
+							<li class="twoLi"><a href="http://www.weixinqun.cc/index.php?m=content&c=index&a=lists&catid=21">旅游</a></li>
+							<li class="twoLi"><a href="http://www.weixinqun.cc/index.php?m=content&c=index&a=lists&catid=19">游戏</a></li>
+						</ul>
+					</div>
+				</li>
+				-->
+			</ul>
+		</div>
+		<div class="search">
+            <form action="http://www.weixinqun.cc/index.php" method="get" target="_blank">
+				<input type="hidden" name="m" value="search"/>
+				<input type="hidden" name="c" value="index"/>
+				<input type="hidden" name="a" value="init"/>
+				<input type="hidden" name="typeid" value="53" id="typeid"/>
+				<input type="hidden" name="siteid" value="1" id="siteid"/>
+                <input type="text" class="txt" name="q" id="q" onBlur="if(value ==''){value='请输入搜索关键字'}" onClick="if(this.value!=''){this.value=''}" value="请输入搜索关键字" />
+				<input type="submit" value="搜索" class="button" />
+            </form>
+		</div>	
+		<div class="issue">
+							<a class="issueA">登陆//注册</a>
+				<div class="release">
+				    <div class="content">
+				        <div class="land"><a href="http://www.weixinqun.cc/index.php?m=member&c=index&a=login&forward=http://www.weixinqun.cc/show-25-4984-1.html">登陆</a></div>
+				        <div class="Registration"><a href="http://www.weixinqun.cc/index.php?m=member&c=index&a=register">注册</a></div>
+				    </div>
+				</div>
+					</div>
+	</div>
+</div><div class="bodyContent clearfix">
+	<div class="notice_index">
+		<p><a href="http://www.weixinqun.cc/index.php?m=member&c=content&a=publish&siteid=1&catid=12" target="_blank">【猛击免费发布微信群】</a>，获取积分兑换VIP会员，即可免费查看站内所有微信群二维码。 马上加入300个微信群，好友轻松突破10000。<a href="http://www.weixinqun.cc/html/special/vip/" target="_blank">【查看详情】</a></p>
+	</div>
+	<div class="event mt20 clearfix">
+		<div class="event1"><a href="http://www.weixinqun.cc/html/special/vip/" target="_blank"><img src="http://www.weixinqun.cc/statics/images/weixinqun/vip-service.jpg" alt="VIP会员以及积分服务开通" /></a></div>
+		<div class="event2"><a href="http://www.weixinqun.cc/show-36-9-1.html" target="_blank"><img src="http://www.weixinqun.cc/statics/images/weixinqun/weilafu-top.jpg" alt="零成本创业，来这里听微拉芙老总亲自授课" /></a></div>
+		<div class="event3"><a href="http://www.weixinqun.cc/show-11-48-1.html" target="_blank"><img src="http://www.weixinqun.cc/statics/images/weixinqun/vip-wechat-corp.jpg" alt="微信群大全网站广告位以及VIP福利详细说明" /></a></div>
+	</div>
+	<div class="breadcrumb">
+		<div class="crumb"><a href="http://www.weixinqun.cc">首页</a><span> &gt; </span><a href="http://www.weixinqun.cc/index.php?m=content&c=index&a=lists&catid=6">微信群</a> > <a href="http://www.weixinqun.cc/index.php?m=content&c=index&a=lists&catid=25">交友</a> >  添加好友群</div>
+	</div>
+	<div class="col-left mod">
+		<div class="top clearfix">
+			<div class="title">微信群详情</div>
+		</div>
+        <div class="Article clearfix">
+        	<div class="content_r">
+				<h1>添加好友群</h1>
+				<div class="summary">
+				<div class="description"><b>简介</b>：通过扫二维码可以进入微信群，来群里可以尽情的添加好友，让自己拥有更多的粉丝</div>
+								<div class="author"><b>发布人</b>：<a>康sir</a></div>
+				<div class="wxqdiqu"><b>地区</b>：<a>不限区域</a></div>
+				<div class="itime"><b>发布时间</b>：<a>2014-08-18 21:43:43</a></div>
+				<div class="vip-service">
+					 <span style="color:#ff0000">两种方式升级VIP会员</span></br>
+					 1、发布微信群获得积分，积分兑换VIP会员。</br>
+					 2、付费升级VIP会员。</br>
+					 >><a href="http://www.weixinqun.cc/html/special/vip/" target="_blank">点击查看详情</a><<</br>
+					 <span style="color:#ff0000">微信群正在以每天50个以上的速度增加</span>
+				</div>
+				</div>
+			</div>
+			<div class="content_l">
+								<img src="http://www.weixinqun.cc/uploadfile/2014/0818/20140818094342928.jpg" width="250px" height="250px" alt="添加好友群"/>
+				<span class="tips_login">
+					<a href="http://www.weixinqun.cc/html/special/vip/" target="_blank">VIP会员方可查看二维码</a> <a href="tencent://message/?uin=2907983427&Site=www.weixinqun.cc&Menu=yes">联系客服升级</a>
+				</span>
+							</div>
+        </div>
+		<div class="event_detail">
+			<a href="http://www.weixinqun.cc/show-34-75-1.html" target="_blank"><img src="http://www.weixinqun.cc/statics/images/weixinqun/event_detail.jpg"></a>
+		</div>
+        <div class="relation clearfix">
+            <h2>你可能对下面的微信群也感兴趣</h2>
+                        <ul class="relationUl">
+								<li class="relationLi">
+					<a href="http://www.weixinqun.cc/show-25-4984-1.html" target="_blank"><img src="http://www.weixinqun.cc/uploadfile/2014/0818/20140818094342928.jpg" alt="添加好友群" width="108px" height="108px"/></a>
+					<a class="name" href="http://www.weixinqun.cc/show-25-4984-1.html" target="_blank">添加好友群</a>
+				</li>
+								<li class="relationLi">
+					<a href="http://www.weixinqun.cc/show-25-4981-1.html" target="_blank"><img src="http://www.weixinqun.cc/uploadfile/2014/0818/20140818094106166.jpg" alt="聚缘美女圈9" width="108px" height="108px"/></a>
+					<a class="name" href="http://www.weixinqun.cc/show-25-4981-1.html" target="_blank">聚缘美女圈9</a>
+				</li>
+								<li class="relationLi">
+					<a href="http://www.weixinqun.cc/show-24-4974-1.html" target="_blank"><img src="http://www.weixinqun.cc/uploadfile/2014/0818/20140818093834490.jpg" alt="投资交流微群" width="108px" height="108px"/></a>
+					<a class="name" href="http://www.weixinqun.cc/show-24-4974-1.html" target="_blank">投资交流微群</a>
+				</li>
+								<li class="relationLi">
+					<a href="http://www.weixinqun.cc/show-24-4973-1.html" target="_blank"><img src="http://www.weixinqun.cc/uploadfile/2014/0530/20140530103153705.jpg" alt="500人脉百人群" width="108px" height="108px"/></a>
+					<a class="name" href="http://www.weixinqun.cc/show-24-4973-1.html" target="_blank">500人脉百人群</a>
+				</li>
+								<li class="relationLi">
+					<a href="http://www.weixinqun.cc/show-13-4971-1.html" target="_blank"><img src="http://www.weixinqun.cc/uploadfile/2014/0818/20140818093724780.jpg" alt="每日一赞，互赞啦" width="108px" height="108px"/></a>
+					<a class="name" href="http://www.weixinqun.cc/show-13-4971-1.html" target="_blank">每日一赞，互赞</a>
+				</li>
+								<li class="relationLi">
+					<a href="http://www.weixinqun.cc/show-17-4970-1.html" target="_blank"><img src="http://www.weixinqun.cc/uploadfile/2014/0818/20140818093538178.jpg" alt="幸福的小吃货，" width="108px" height="108px"/></a>
+					<a class="name" href="http://www.weixinqun.cc/show-17-4970-1.html" target="_blank">幸福的小吃货，</a>
+				</li>
+								<li class="relationLi">
+					<a href="http://www.weixinqun.cc/show-25-4969-1.html" target="_blank"><img src="http://www.weixinqun.cc/uploadfile/2014/0818/20140818093409152.jpg" alt="休闲聊天交友群" width="108px" height="108px"/></a>
+					<a class="name" href="http://www.weixinqun.cc/show-25-4969-1.html" target="_blank">休闲聊天交友群</a>
+				</li>
+								<li class="relationLi">
+					<a href="http://www.weixinqun.cc/show-25-4968-1.html" target="_blank"><img src="http://www.weixinqun.cc/uploadfile/2014/0818/20140818024137438.jpg" alt="全国夜猫微信群" width="108px" height="108px"/></a>
+					<a class="name" href="http://www.weixinqun.cc/show-25-4968-1.html" target="_blank">全国夜猫微信群</a>
+				</li>
+								<li class="relationLi">
+					<a href="http://www.weixinqun.cc/show-12-4965-1.html" target="_blank"><img src="http://www.weixinqun.cc/uploadfile/2014/0818/20140818092945404.jpg" alt="AUSP面膜" width="108px" height="108px"/></a>
+					<a class="name" href="http://www.weixinqun.cc/show-12-4965-1.html" target="_blank">AUSP面膜</a>
+				</li>
+								<li class="relationLi">
+					<a href="http://www.weixinqun.cc/show-19-4964-1.html" target="_blank"><img src="http://www.weixinqun.cc/uploadfile/2014/0818/20140818091448586.jpg" alt="一三一素 全国招代" width="108px" height="108px"/></a>
+					<a class="name" href="http://www.weixinqun.cc/show-19-4964-1.html" target="_blank">一三一素 全国</a>
+				</li>
+								<li class="relationLi">
+					<a href="http://www.weixinqun.cc/show-19-4962-1.html" target="_blank"><img src="http://www.weixinqun.cc/uploadfile/2014/0630/20140630105835147.jpg" alt="微商创业群" width="108px" height="108px"/></a>
+					<a class="name" href="http://www.weixinqun.cc/show-19-4962-1.html" target="_blank">微商创业群</a>
+				</li>
+								<li class="relationLi">
+					<a href="http://www.weixinqun.cc/show-25-4961-1.html" target="_blank"><img src="http://www.weixinqun.cc/uploadfile/2014/0815/20140815095822204.jpg" alt="百人分享群" width="108px" height="108px"/></a>
+					<a class="name" href="http://www.weixinqun.cc/show-25-4961-1.html" target="_blank">百人分享群</a>
+				</li>
+								<li class="relationLi">
+					<a href="http://www.weixinqun.cc/show-12-4960-1.html" target="_blank"><img src="http://www.weixinqun.cc/uploadfile/2014/0818/20140818091138713.jpg" alt="欧美姿" width="108px" height="108px"/></a>
+					<a class="name" href="http://www.weixinqun.cc/show-12-4960-1.html" target="_blank">欧美姿</a>
+				</li>
+								<li class="relationLi">
+					<a href="http://www.weixinqun.cc/show-19-4958-1.html" target="_blank"><img src="http://www.weixinqun.cc/uploadfile/2014/0818/20140818090902475.jpg" alt="微商交谈 发广告的踢" width="108px" height="108px"/></a>
+					<a class="name" href="http://www.weixinqun.cc/show-19-4958-1.html" target="_blank">微商交谈 发广</a>
+				</li>
+								<li class="relationLi">
+					<a href="http://www.weixinqun.cc/show-19-4957-1.html" target="_blank"><img src="http://www.weixinqun.cc/uploadfile/2014/0818/20140818090209730.jpg" alt="新手微商交流" width="108px" height="108px"/></a>
+					<a class="name" href="http://www.weixinqun.cc/show-19-4957-1.html" target="_blank">新手微商交流</a>
+				</li>
+							</ul>
+                    </div>
+            <iframe src="http://www.weixinqun.cc/index.php?m=comment&c=index&a=init&commentid=content_25-4984-1&iframe=1" width="94%" height="100%" id="comment_iframe" frameborder="0" scrolling="no" style="margin-left:18px; margin-top:20px;"></iframe>
+          </div>
+	<div class="col-right">
+		<div class="col-right-1 mod2 mt20">
+			<div class="top clearfix">
+				<div class="title2">
+					<a href="http://www.weixinqun.cc/list-34-1.html">品牌推荐</a>
+					<div class="iwant">
+						<a href="http://www.weixinqun.cc/show-11-48-1.html" target="_blank"><img src="http://www.weixinqun.cc/statics/images/weixinqun/iwant.png"></a>
+					</div>
+				</div>
+			</div>
+			<div class="content">
+			    <ul class="marketUl clearfix">
+															<li class="marketLi">
+						<img src="http://www.weixinqun.cc/uploadfile/2014/0818/20140818034256554.jpg" alt="初采CHACOL招募一级代理" width="55px" height="55px"/>
+						<span class="name">初采CHACOL招募一</span>
+						<a href="http://www.weixinqun.cc/show-34-135-1.html" class="follow" target="_blank">马上关注</a>
+					</li>
+										<li class="marketLi">
+						<img src="http://www.weixinqun.cc/uploadfile/2014/0809/20140809083127472.jpg" alt="全球奢侈品厂家直供" width="55px" height="55px"/>
+						<span class="name">全球奢侈品厂家直</span>
+						<a href="http://www.weixinqun.cc/show-34-120-1.html" class="follow" target="_blank">马上关注</a>
+					</li>
+										<li class="marketLi">
+						<img src="http://www.weixinqun.cc/uploadfile/2014/0717/20140717031327699.jpg" alt="财富狂马微信号kma888" width="55px" height="55px"/>
+						<span class="name">财富狂马微信号kma</span>
+						<a href="http://www.weixinqun.cc/show-34-70-1.html" class="follow" target="_blank">马上关注</a>
+					</li>
+										<li class="marketLi">
+						<img src="http://www.weixinqun.cc/uploadfile/2014/0809/20140809104332708.jpg" alt="玥然天仙子海藻面膜总代" width="55px" height="55px"/>
+						<span class="name">玥然天仙子海藻面</span>
+						<a href="http://www.weixinqun.cc/show-34-76-1.html" class="follow" target="_blank">马上关注</a>
+					</li>
+										<li class="marketLi">
+						<img src="http://www.weixinqun.cc/uploadfile/2014/0721/20140721113327728.jpg" alt="J.S_男装厂家" width="55px" height="55px"/>
+						<span class="name">J.S_男装厂家</span>
+						<a href="http://www.weixinqun.cc/show-34-77-1.html" class="follow" target="_blank">马上关注</a>
+					</li>
+													    </ul>
+			</div>
+		</div>
+		<div class="col-right-2 mod2 mt20">
+			<div class="top clearfix">
+				<div class="title2">
+					<a href="/list-9-1.html">风云群主</a>
+					<div class="iwant">
+						<a href="http://www.weixinqun.cc/show-11-48-1.html" target="_blank"><img src="http://www.weixinqun.cc/statics/images/weixinqun/iwant.png"></a>
+					</div>
+				</div>
+			</div>
+			<div class="content">
+			    <ul class="marketUl clearfix">
+															<li class="marketLi"><img src="http://www.weixinqun.cc/uploadfile/2014/0805/20140805051050540.jpg" alt="香港萱肌密授权一级经销商" width="55px" height="55px"/><span class="name">香港萱肌密授权一</span><a href="http://www.weixinqun.cc/show-9-225-1.html" class="follow" target="_blank">我要关注</a></li>
+										<li class="marketLi"><img src="http://www.weixinqun.cc/uploadfile/2014/0729/20140729122720842.jpg" alt="奢侈品女包代购 " width="55px" height="55px"/><span class="name">奢侈品女包代购 </span><a href="http://www.weixinqun.cc/show-9-221-1.html" class="follow" target="_blank">我要关注</a></li>
+										<li class="marketLi"><img src="http://www.weixinqun.cc/uploadfile/2014/0805/20140805061337666.jpg" alt="奢侈品放货（招代理）" width="55px" height="55px"/><span class="name">奢侈品放货（招代</span><a href="http://www.weixinqun.cc/show-9-227-1.html" class="follow" target="_blank">我要关注</a></li>
+										<li class="marketLi"><img src="http://www.weixinqun.cc/uploadfile/2014/0803/20140803093927294.jpg" alt="女侠poss独家神奇洗护招代理" width="55px" height="55px"/><span class="name">女侠poss独家神奇</span><a href="http://www.weixinqun.cc/show-9-223-1.html" class="follow" target="_blank">我要关注</a></li>
+										<li class="marketLi"><img src="http://www.weixinqun.cc/uploadfile/2014/0809/20140809021906999.jpg" alt="有惊喜" width="55px" height="55px"/><span class="name">有惊喜</span><a href="http://www.weixinqun.cc/show-9-230-1.html" class="follow" target="_blank">我要关注</a></li>
+													    </ul>
+			</div>
+		</div>
+		<div class="col-right-3 mod">
+			<div class="top clearfix">
+				<div class="title2"><a href="/list-10-1.html">微信群资讯</a></div>
+			</div>
+			<div class="content">
+				<ul class="helpsUl">
+															<li class="helpLi"><a href="http://www.weixinqun.cc/show-10-137-1.html" target="_blank">微信新版新功能，你造吗？</a></li>
+                    					<li class="helpLi"><a href="http://www.weixinqun.cc/show-10-69-1.html" target="_blank">粉丝经济：让信任成为交易通道</a></li>
+                    					<li class="helpLi"><a href="http://www.weixinqun.cc/show-10-66-1.html" target="_blank">想做大？请放弃熟人市场，用心开</a></li>
+                    					<li class="helpLi"><a href="http://www.weixinqun.cc/show-10-28-1.html" target="_blank">微信时代如何快速增加人脉？</a></li>
+                    					<li class="helpLi"><a href="http://www.weixinqun.cc/show-10-25-1.html" target="_blank">微信群，最好的微信人脉扩展工具</a></li>
+                                        				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+<!--
+	function show_ajax(obj) {
+		var keywords = $(obj).text();
+		var offset = $(obj).offset();
+		var jsonitem = '';
+		$.getJSON("http://www.weixinqun.cc/index.php?m=content&c=index&a=json_list&type=keyword&modelid=12&id=4984&keywords="+encodeURIComponent(keywords),
+				function(data){
+				var j = 1;
+				var string = "<div class='point key-float'><div style='position:relative'><div class='arro'></div>";
+				string += "<a href='JavaScript:;' onclick='$(this).parent().parent().remove();' hidefocus='true' class='close'><span>关闭</span></a><div class='contents f12'>";
+				if(data!=0) {
+				  $.each(data, function(i,item){
+					j = i+1;
+					jsonitem += "<a href='"+item.url+"' target='_blank'>"+j+"、"+item.title+"</a><BR>";
+					
+				  });
+					string += jsonitem;
+				} else {
+					string += '没有找到相关的信息！';
+				}
+					string += "</div><span class='o1'></span><span class='o2'></span><span class='o3'></span><span class='o4'></span></div></div>";		
+					$(obj).after(string);
+					$('.key-float').mouseover(
+						function (){
+							$(this).siblings().css({"z-index":0})
+							$(this).css({"z-index":1001});
+						}
+					)
+					$(obj).next().css({ "left": +offset.left-100, "top": +offset.top+$(obj).height()+12});
+				});
+	}
+
+	function add_favorite(title) {
+		$.getJSON('http://www.weixinqun.cc/api.php?op=add_favorite&title='+encodeURIComponent(title)+'&url='+encodeURIComponent(location.href)+'&'+Math.random()+'&callback=?', function(data){
+			if(data.status==1)	{
+				$("#favorite").html('收藏成功');
+			} else {
+				alert('请登录');
+			}
+		});
+	}
+
+$(function(){
+  $('#Article .content img').LoadImage(true, 660, 660,'http://www.weixinqun.cc/statics/images/s_nopic.gif');    
+})
+//-->
+</script>
+
+<script language="JavaScript" src="http://www.weixinqun.cc/api.php?op=count&id=4984&modelid=12"></script>
+<div class="footer clearfix">
+	<div class="leftPant">
+		© 2014 <a href="#">微信群</a>, all rights reserved. 湘ICP备13006821号-2
+		<script type="text/javascript">
+		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8e0529e5e941b1eaf8cb0615e4bca77a' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+	<div class="rightPant">
+		<ul class="footerUl">
+			<li class="footerLi"><a href="http://www.weixinqun.cc/list-2-1.html">关于我们</a></li>
+			<li class="footerLi"><a href="http://www.weixinqun.cc/list-3-1.html">联系我们</a></li>
+			<li class="footerLi"><a href="http://www.weixinqun.cc/list-4-1.html">版权声明</a></li>
+			<li class="footerLi"><a href="http://www.weixinqun.cc/list-11-1.html">帮助中心</a></li>
+		</ul>
+	</div>
+</div>
+<div class="goTop">
+    <a href="tencent://message/?uin=2907983427&Site=www.weixinqun.cc&Menu=yes"><img src="http://www.weixinqun.cc/statics/images/weixinqun/kefu.jpg" alt="在线客服"></a>
+    <a id="GogoTop" href="#"><img src="http://www.weixinqun.cc/statics/images/weixinqun/goTop.jpg" alt="返回顶部"></a>
+</div>
+<div class="vip_float">
+	<a href="http://www.weixinqun.cc/html/special/vip/" target="_blank"><img src="http://www.weixinqun.cc/statics/images/weixinqun/vip.jpg" alt="VIP会员专题页面"></a>
+</div>
+<div class="left_float" id="lf">
+	<a href="http://www.microwinner.com" target="_blank" rel="nofollow" id="lfa"><img src="http://www.weixinqun.cc/statics/images/weixinqun/left_float.jpg" alt="左侧漂浮"></a>
+</div>
+<script src="http://www.weixinqun.cc/statics/js/my.js"></script>
+</body>
+</html>

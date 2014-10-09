@@ -1,0 +1,52 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd"
+	default-autowire="byName">
+	
+	<bean name="wqContext" class="com.weiquan.common.WqContext" 
+		init-method="initSystem" 
+		scope="singleton"
+		lazy-init="false"
+		destroy-method="destory">
+		<property name="systemJob">
+			<map>
+				<entry key="cacheJob">
+					<ref bean="cacheJob"/>
+				</entry>
+				<entry key="elementSourceRegisteJob">
+					<ref bean="elementSourceRegisteJob"/>
+				</entry>
+			</map>
+		</property>
+	</bean>
+	
+	<bean id="cacheJob" class="com.weiquan.common.system.init.impl.SystemCacheInitJob" scope="singleton">
+		<property name="cacheMap">
+			<map>
+				<entry key="attrMappingCache">
+					<ref bean="attrMappingCache"/>
+				</entry>
+				<entry key="roleTagMapCache">
+					<ref bean="roleTagMapCache"/>
+				</entry>
+			</map>
+		</property>
+		<property name="wqContext" ref="wqContext"></property>
+	</bean>
+	
+	<bean id="elementSourceRegisteJob" class="com.weiquan.common.system.init.impl.ElementSourceRegisteJob">
+		<property name="elementSourceInterfaces">
+			<list>
+			<bean class="com.weiquan.service.element.source.impl.AdvertisementElementSource"/>
+			<bean class="com.weiquan.service.element.source.impl.BussinessElementSourceImpl"/>
+			<bean class="com.weiquan.service.element.source.impl.GoodsElementSourceImpl"/>
+			<bean class="com.weiquan.service.element.source.impl.GroupElementSourceImpl"/>
+			<bean class="com.weiquan.service.element.source.impl.NewInfoElementSourceImpl"/>
+			</list>
+		</property>
+	</bean>
+	
+	
+</beans>

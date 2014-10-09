@@ -1,0 +1,12 @@
+.adwaretable {
+    padding-top: 1px;
+    padding-right: 1px;
+    padding-bottom: 1px;
+    padding-left: 1px;
+     border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;
+     border:solid 1px rgba(148, 148, 148, 0.22);
+}
+
+.adwaretable p{
+	margin-bottom: 0px;
+}

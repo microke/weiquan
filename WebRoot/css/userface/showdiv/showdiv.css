@@ -1,0 +1,50 @@
+
+.showtable {
+    padding-top: 1px;
+    padding-right: 1px;
+    padding-bottom: 1px;
+    padding-left: 1px;
+     border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;
+     border:solid 1px rgba(148, 148, 148, 0.22);
+     background: rgb(255,255,255)
+}
+
+.showtabletitle {
+	background: #E7E6E6;
+    padding-bottom: 3px;
+}
+
+.showtablebody{
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.showtablebody a{
+	color: #000;
+	
+}
+
+.showtable .showtabletitle a {
+	color: #5c668d;
+	font-size: 20px;
+	border-bottom: 3px solid #5c668d;
+	float: left;
+	margin-top: 10px;
+	margin-right: 18px;
+	 
+	font-family: "微软雅黑", "宋体", sans-serif;
+}
+
+.showtabletr{
+	padding-right: 1px;
+	padding-left: 1px;
+	border:solid 1px rgba(148, 148, 148, 0.22);
+}
+
+
+.showtablefoot {
+	background: url("../../../images/showdiv/table_foot.jpg") 0px 1px; 
+	margin: 1px 0px; 
+	width: 100%; 
+	height: 10px;
+}

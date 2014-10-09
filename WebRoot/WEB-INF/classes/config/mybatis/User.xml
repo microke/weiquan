@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC 
+    "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	<!--这块等于dao接口的实现  namespace必须和接口的类路径一样-->
+<mapper namespace="com.weiquan.dao.UserDao">
+	<resultMap id="result-User-base" type="com.weiquan.domain.User">
+		<result property="userId" column="USERID" />
+		<result property="name" column="NAME" />
+		<result property="password" column="PASSWORD" />
+		<result property="enabled" column="ENABLED" />
+		<result property="validDate" column="VALIDDATE" />
+		<result property="validCount" column="VALIDCOUNT" />
+		<result property="type" column="TYPE" />
+		<result property="account" column="ACCOUNT" />
+		<result property="telephone" column="TELEPHONE" />
+		<result property="email" column="EMAIL" />
+		<result property="address" column="ADDRESS" />
+		<result property="certType" column="CERTTYPE" />
+		<result property="certNumber" column="CERTNUMBER" />
+		<result property="memo" column="MEMO" />
+		<collection property="vipLevel" javaType="VipLevel" select="com.weiquan.dao.VipLevelDao.get" column="VIPID" />
+		<collection property="role" javaType="Role" select="com.weiquan.dao.RoleDao.get" column="roleId"/>
+	</resultMap>
+	<sql id="UserAllCols">
+		userId, name, vipId, password, enabled, roleId, validDate, validCount, type, account, telephone, email, address, certType, certNumber, memo
+	</sql>
+	
+	<select id="getLoginUser" parameterType="User" resultMap="result-User-base">
+		select <include refid="UserAllCols"/> from weiquan_user  
+		 where userId=#{loginName} or email = #{loginName} or telephone = #{loginName}
+	</select>
+	
+	<select id="get" parameterType="User" resultMap="result-User-base">
+		select <include refid="UserAllCols"/> from weiquan_user  where userId=#{userId}
+    </select>
+    <insert id="insert" parameterType="User">
+		insert into weiquan_user(<include refid="UserAllCols"/>) 
+		values(#userId#, #name#, #vipLevel.vipId#, #password#, #enabled#, 
+		#role.roleId#, #validDate#, #validCount#, #type#, #account#, #telephone#, #email#, #address#, #certType#, #certNumber#, #memo#)
+	</insert>
+	
+	<update id="update" parameterType="User">
+		update weiquan_user set name = #name#, vipId = #vipLevel.vipId#, password = #password#, enabled = #enabled#, roleId = #role.roleId#, validDate = #validDate#, validCount = #validCount#, type = #type#, account = #account#, telephone = #telephone#, email = #email#, address = #address#, certType = #certType#, certNumber = #certNumber#, memo = #memo# where userId = #userId#
+	</update>
+    
+    <delete id="delete" parameterType="User">
+    	delete from weiquan_usert where userId=#{userId}
+    </delete>
+</mapper>

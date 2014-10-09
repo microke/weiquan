@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC 
+    "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.weiquan.dao.TableTempletDao">
+	<resultMap id="result-TableTemplet-base" type="com.weiquan.domain.TableTemplet">
+		<result property="templetId" column="TEMPLETID" />
+		<result property="templetName" column="TEMPLETNAME" />
+		<result property="page" column="PAGE" />
+		<result property="size" column="SIZE" />
+		<result property="columnCount" column="COLUMNCOUNT" />
+		<result property="pageType" column="PAGETYPE" />
+	</resultMap>
+	<sql id="TableTempletAllColsWithOutKey">
+		templetName, page, size, columnCount,pageType
+	</sql>
+	<sql id="TableTempletAllCols">
+		templetId, <include refid="TableTempletAllColsWithOutKey"/>
+	</sql>
+
+	<insert id="insert" parameterType="TableTemplet" useGeneratedKeys="true" keyProperty="templetId">
+		insert into weiquan_TableTemplet(<include refid="TableTempletAllColsWithOutKey"/>) 
+		values(#{templetName}, #{page}, #{size}, #{columnCount},#{pageType})
+	</insert>
+
+	<update id="update" parameterType="TableTemplet">
+		update weiquan_TableTemplet 
+		   set templetName = #{templetName}, page = #{page}, 
+		       size = #{size}, columnCount = #{columnCount} ,
+		       pageType=#{pageType}
+		 where templetId = #{templetId}
+	</update>
+	<select id="get" resultMap="result-TableTemplet-base"  parameterType="long" >
+		select <include refid="TableTempletAllCols"/> from weiquan_TableTemplet t  where templetId = #{templetId}
+	</select>
+</mapper>

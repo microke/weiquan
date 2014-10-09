@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC 
+    "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.weiquan.dao.VipLevelDao">
+	<resultMap id="result-VipLevel-base" type="com.weiquan.domain.VipLevel">
+		<result property="vipId" column="VIPID" />
+		<result property="vipName" column="VIPNAME" />
+		<result property="vipPower" column="VIPPOWER" />
+		<result property="rateOfMonth" column="rateOfMonth" />
+		<result property="rateOfHarfYear" column="rateOfHarfYear" />
+		<result property="rateOfYear" column="rateOfYear" />
+		<result property="rateOfForever" column="rateOfForever" />
+		<result property="memo" column="memo" />
+	</resultMap>
+	<sql id="VipLevelAllColsWithOutKey">
+		vipName, vipPower, rateOfMonth,rateOfHarfYear,rateOfYear,rateOfForever,memo
+	</sql>
+	<sql id="VipLevelAllCols">
+		vipId, <include refid="VipLevelAllColsWithOutKey"/>
+	</sql>
+
+	<insert id="insert" parameterType="VipLevel" useGeneratedKeys="true" keyProperty="vipId">
+		insert into weiquan_VipLevel(<include refid="VipLevelAllColsWithOutKey"/>) 
+		values(#{vipName}, #{vipPower},#{rateOfMonth},#{rateOfHarfYear},#{rateOfYear},#{rateOfForever},#{memo})
+	</insert>
+
+	<update id="update" parameterType="VipLevel">
+		update weiquan_VipLevel 
+		   set vipName = #{vipName}, 
+		   	   vipPower = #{vipPower},
+			   rateOfMonth=#{rateOfMonth},
+			  rateOfHarfYear= #{rateOfHarfYear},
+			  rateOfYear#{rateOfYear},
+			   rateOfForever = #{rateOfForever},
+			   memo=#{memo}
+		 where vipId = #{vipId}
+	</update>
+	<select id="get" resultMap="result-VipLevel-base"  parameterType="long" >
+		select <include refid="VipLevelAllCols"/> from weiquan_VipLevel t  where vipId = #{vipId}
+	</select>
+</mapper>

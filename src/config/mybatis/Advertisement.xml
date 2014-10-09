@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC 
+    "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.weiquan.dao.AdvertisementDao">
+	<resultMap id="result-Advertisement-base" type="com.weiquan.domain.Advertisement">
+		<result property="adId" column="ADID" />
+		<result property="adName" column="ADNAME" />
+		<result property="createDate" column="CREATEDATE" />
+		<result property="beginDate" column="BEGINDATE" />
+		<result property="endDate" column="ENDDATE" />
+		<result property="adType" column="ADTYPE" />
+		<result property="channelName" column="CHANNELNAME" />
+		<result property="memo" column="MEMO" />
+		<result property="sheetId" column="SHEETID" />
+	</resultMap>
+	<sql id="AdvertisementAllColsWithOutKey">
+		adName, createDate, beginDate, endDate, adType, channelName, memo, sheetId
+	</sql>
+	<sql id="AdvertisementAllCols">
+		adId, <include refid="AdvertisementAllColsWithOutKey"/>
+	</sql>
+
+	<insert id="insert" parameterType="Advertisement" useGeneratedKeys="true" keyProperty="adId">
+		insert into weiquan_Advertisement(<include refid="AdvertisementAllColsWithOutKey"/>) 
+		values(#{adName}, #{createDate}, #{beginDate}, #{endDate}, #{adType}, #{channelName}, #{memo}, #{sheetId})
+	</insert>
+
+	<update id="update" parameterType="Advertisement">
+		update weiquan_Advertisement 
+		   set adName = #{adName}, createDate = #{createDate}, 
+		   	   beginDate = #{beginDate}, endDate = #{endDate}, 
+		   	   adType = #{adType}, channelName = #{channelName}, 
+		   	   memo = #{memo}, sheetId=#{sheetId}
+		 where adId = #{adId}
+	</update>
+	<select id="get" resultMap="result-Advertisement-base"  parameterType="long" >
+		select <include refid="AdvertisementAllCols"/> from weiquan_Advertisement t  where adId = #{adId}
+	</select>
+</mapper>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC 
+    "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.weiquan.dao.ElementDao">
+	<resultMap id="result-Element-base" type="com.weiquan.domain.Element">
+		<result property="id" column="ID" />
+		<result property="sourceType" column="SOURCETYPE" />
+		<result property="clickUrl" column="IMAGEURL" />
+		<result property="name" column="NAME" />
+		<result property="simpleIntroduce" column="SIMPLEINTRODUCE" />
+	</resultMap>
+	<resultMap id="result-Element-base-0" type="com.weiquan.domain.Element" extends="result-Element-base">
+		<association property="groupShowImage" column="{relationNo=id,tableName=tableName, imageType=imageType_show}" javaType="com.weiquan.domain.Image" select="com.weiquan.dao.ImageDao.getImageByRelationNo"/>
+		<association property="qrImage" column="{relationNo=id,tableName=tableName, imageType=imageType_qr}" javaType="com.weiquan.domain.Image" select="com.weiquan.dao.ImageDao.getImageByRelationNo"/>
+	</resultMap>
+	<resultMap id="result-Element-base-1" type="com.weiquan.domain.Element" extends="result-Element-base">
+	</resultMap>
+	
+	<sql id="imageTypeSql">
+		1 as imageType_show,
+	    2 as imageType_qr,
+	    3  asimageType_lists	
+	</sql>
+	
+	<select id="queryElementFromGroup_0" parameterType="ElementQuery" resultMap="result-Element-base-0">
+		select groupId as id,  
+			   0 as  sourceType,
+			   '' as clickUrl,
+			   groupName as name,
+			   groupSimpleName as simpleIntroduce,
+			   'weiquan_group_image' as tableName, 
+			   <include refid="imageTypeSql"/>
+		from weiquan_group
+		order by groupId desc limit #{start},#{limit}
+	</select>
+	
+	<select id="queryElementFromGoods_0" parameterType="ElementQuery" resultMap="result-Element-base-0">
+		select goodsId as id,  
+			   0 as  sourceType,
+			   '' as clickUrl,
+			   goodsName as name,
+			   goodResume as simpleIntroduce,
+			   'weiquan_goods_image' as tableName, 
+			   <include refid="imageTypeSql"/>
+		from weiquan_goods
+		order by goodsId desc limit #{start},#{limit}
+	</select>
+	
+	<select id="queryElementFromBussiness_0" parameterType="ElementQuery" resultMap="result-Element-base-0">
+		select bussinessId as id,  
+			   0 as  sourceType,
+			   '' as clickUrl,
+			   name as name,
+			   memo as simpleIntroduce,
+			   'weiquan_bussiness_image' as tableName, 
+			   <include refid="imageTypeSql"/>
+		from weiquan_bussiness 
+		order by bussinessId desc limit #{start},#{limit}
+	</select>
+	
+	<select id="queryElementFromNewInfo_1" parameterType="ElementQuery" resultMap="result-Element-base-1">
+		select newId as id,  
+			   1 as  sourceType,
+			   '' as clickUrl,
+			   title as name
+		from weiquan_newInfo
+		order by newId desc limit #{start},#{limit}
+	</select>
+	
+	<select id="queryElementFromAdvertisement_2" parameterType="ElementQuery" resultMap="result-Element-base-0">
+		select adId as id,  
+			   2 as  sourceType,
+			   '' as clickUrl,
+			   adName as name,
+			   memo as simpleIntroduce,
+			   'weiquan_Advertisement_image' as tableName, 
+			   <include refid="imageTypeSql"/>
+		from weiquan_advertisement
+		where sheetId = #{sheetId} and adType =2
+		order by adId desc limit #{start},#{limit}
+	</select>
+	
+	<select id="queryElementFromAdvertisement_3" parameterType="ElementQuery" resultMap="result-Element-base-0">
+		select adId as id,  
+			   2 as  sourceType,
+			   '' as clickUrl,
+			   adName as name,
+			   memo as simpleIntroduce,
+			   'weiquan_Advertisement_image' as tableName, 
+			   <include refid="imageTypeSql"/>
+		from weiquan_advertisement
+		where sheetId = #{sheetId} and adType =3
+		order by adId desc limit #{start},#{limit}
+	</select>
+</mapper>

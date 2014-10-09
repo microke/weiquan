@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC 
+    "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.weiquan.dao.TagDao">
+	
+	<resultMap id="result-Tag-base" type="com.weiquan.domain.Tag">
+		<id property="tagId" column="TAGID" />
+		<result property="tagName" column="TAGNAME" />
+		<result property="tagType" column="TAGTYPE" />
+		<result property="tagUrl" column="TAGURL" />
+		<result property="orderNo" column="ORDERNO" />
+		<result property="level" column="LEVEL" />
+	</resultMap>
+	
+	<resultMap type="com.weiquan.domain.Tag" id="result-Tag-hasSheets" extends="result-Tag-base">
+		<collection property="sheets" column="tagId"  javaType="ArrayList" ofType="Sheet" select="com.weiquan.dao.SheetDao.querySheetsByTagId" >
+		</collection>
+	</resultMap>
+	
+	<sql id="TagAllColsWithOutKey">
+		tagName, tagType, tagUrl, orderNo, level
+	</sql>
+	<sql id="TagAllCols">
+		tagId, <include refid="TagAllColsWithOutKey"/>
+	</sql>
+
+	<insert id="insert" parameterType="Tag" useGeneratedKeys="true" keyProperty="tagId">
+		insert into weiquan_Tag(<include refid="TagAllColsWithOutKey"/>) values(#{tagName}, #{tagType}, #{tagUrl}, #{orderNo}, #{level})
+	</insert>
+
+	<update id="update" parameterType="Tag">
+		update weiquan_Tag set tagName = #{tagName}, tagType = #{tagType}, tagUrl = #{tagUrl}, orderNo = #{orderNo}, level = #{level} where tagId = #{tagId}
+	</update>
+	
+	<select id="getListByQueryParam" parameterType="com.weiquan.domain.QueryParam" resultMap="result-Tag-hasSheets">
+		select <include refid="TagAllCols"/> 
+		  from weiquan_Tag t  
+		 <where >
+			 <if test="serialno!=0" >
+			 	tagId = #{serialno}
+			 </if>
+		 </where>
+		 order by orderNo
+	</select>
+	
+	<select id="get" resultMap="result-Tag-base"  parameterType="long" >
+		select <include refid="TagAllCols"/> from weiquan_Tag t  where tagId = #{tagId}
+	</select>
+</mapper>

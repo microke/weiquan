@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC 
+    "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	<!--这块等于dao接口的实现  namespace必须和接口的类路径一样-->
+<mapper namespace="com.weiquan.dao.GroupDao">
+	<resultMap id="result-Group-base" type="com.weiquan.domain.Group">
+		<id property="groupId" column="GROUPID" />
+		<result property="sourceId" column="SOURCEID" />
+		<result property="industryId" column="industryId" />
+		<result property="userId" column="USERID" />
+		<result property="groupName" column="GROUPNAME" />
+		<result property="groupSimpleName" column="GROUPSIMPLENAME" />
+		<result property="groupUrl" column="GROUPURL"  />
+		<result property="createTime" column="createTime" />
+		 <association property="groupShowImage" column="{relationNo=groupId,tableName=tableName, imageType=imageType_show}" javaType="com.weiquan.domain.Image" select="com.weiquan.dao.ImageDao.getImageByRelationNo">
+		</association>
+		<association property="qrImage" column="{relationNo=groupId,tableName=tableName, imageType=imageType_qr}" javaType="com.weiquan.domain.Image" select="com.weiquan.dao.ImageDao.getImageByRelationNo">
+		</association> 
+	</resultMap>
+	
+	<sql id="GroupAllColsWithOutKey">
+		 sourceId, industryId, userId, groupName, groupSimpleName, groupUrl,createTime
+	</sql>
+	
+	<sql id="GroupAllColsAllCols">
+		groupId, <include refid="GroupAllColsWithOutKey"/>
+	</sql>
+	
+	<insert id="insert" parameterType="Group">
+	insert into weiquan_group(<include refid="GroupAllColsWithOutKey"/>) 
+	values(#{sourceId}, #{industryId}, #{userId}, #{groupName}, #{groupSimpleName}, #{groupUrl},#{createTime})
+	</insert>
+	
+	<update id="update" parameterType="Group">
+	update weiquan_group 
+	   set sourceId = #{sourceId}, industryId = #{industryId}, userId = #{userId}, 
+	   	   groupName = #{groupName}, groupSimpleName = #{groupSimpleName}, 
+	   	   groupUrl = #{groupUrl},
+	   	   createTime=#{createTime} 
+	 where groupId = #{groupId}
+	</update>
+	
+	<select id="get" parameterType="Group" resultMap="result-Group-base">
+	select <include refid="GroupAllColsAllCols"/> , 'weiquan_group_image' as tableName, 1 as imageType_show,2 as imageType_qr from weiquan_group where  groupId =#{groupId}
+	</select>
+
+</mapper>

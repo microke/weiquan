@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC 
+    "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.weiquan.dao.IndustryDao">
+	<resultMap id="result-Industry-base" type="com.weiquan.domain.Industry">
+		<result property="industryId" column="INDUSTRYID" />
+		<result property="name" column="NAME" />
+		<result property="memo" column="MEMO" />
+		<result property="logoImage" column="LOGOIMAGE" />
+	</resultMap>
+	<sql id="IndustryAllColsWithOutKey">
+		name, memo, logoImage
+	</sql>
+	<sql id="IndustryAllCols">
+		industryId, <include refid="IndustryAllColsWithOutKey"/>
+	</sql>
+
+	<insert id="insert" parameterType="Industry" useGeneratedKeys="true" keyProperty="industryId">
+		insert into weiquan_Industry(<include refid="IndustryAllColsWithOutKey"/>) values(#{name}, #{memo}, #{logoImage})
+	</insert>
+
+	<update id="update" parameterType="Industry">
+		update weiquan_Industry set name = #{name}, memo = #{memo}, logoImage = #{logoImage} where industryId = #{industryId}
+	</update>
+	<select id="get" resultMap="result-Industry-base"  parameterType="long" >
+		select <include refid="IndustryAllCols"/> from weiquan_Industry t  where industryId = #{industryId}
+	</select>
+</mapper>
